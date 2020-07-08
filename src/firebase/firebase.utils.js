@@ -56,16 +56,16 @@ firebase.initializeApp(config)
 const provider = new firebase.auth.GoogleAuthProvider()
 provider.setCustomParameters({ prompt: 'select_account' })
 
-// Save a reference for the Firebase authentication.
-export const auth = firebase.auth()
-
-// Save a reference for the Firebase database.
-export const firestore = firebase.firestore()
-
 // Declare a custom function that initiates
 //   Google authentication.
 export const signInWithGoogle = function () {
   auth.signInWithPopup(provider)
 }
+
+// Save a reference for the Firebase authentication.
+export const auth = firebase.auth()
+
+// Save a reference for the Firebase database.
+export const firestore = firebase.firestore()
 
 export default firebase
