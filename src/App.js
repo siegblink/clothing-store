@@ -26,7 +26,8 @@ class App extends React.Component {
           this.setState({
             currentUser: { id: snapshot.id, ...snapshot.data() },
           })
-          console.log(this.state)
+          // The commented out code is only used to check the value of the state
+          // console.log(this.state)
         })
       } else {
         this.setState({ currentUser: userAuth })
